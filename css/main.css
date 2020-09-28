@@ -2441,7 +2441,7 @@ footer {
   }
 
   .mix-slider .slick-next.slick-disabled {
-    right: 1000px;
+    right: -1000px;
   }
 
   /* конец */
@@ -2643,7 +2643,7 @@ footer {
   }
 
   .service-slider .slick-next.slick-disabled {
-    right: 1000px;
+    right: -1000px;
   }
 
   /* конец */
