@@ -1,0 +1,4041 @@
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  src: url('fonts/MyriadPro-Regular.eot');
+  src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/MyriadPro-Regular.woff') format('woff'),
+  url('fonts/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Light SemiExtended';
+  src: url('fonts/MyriadPro-LightSemiExt.eot');
+  src: url('fonts/MyriadPro-LightSemiExt.eot?#iefix') format('embedded-opentype'),
+  url('fonts/MyriadPro-LightSemiExt.woff') format('woff'),
+  url('fonts/MyriadPro-LightSemiExt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Semibold';
+  src: url('fonts/MyriadPro-Semibold.eot');
+  src: url('fonts/MyriadPro-Semibold.eot?#iefix') format('embedded-opentype'),
+  url('fonts/MyriadPro-Semibold.woff') format('woff'),
+  url('fonts/MyriadPro-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Myriad Pro Regular';
+}
+
+
+body {
+  font-size: 16px;
+  color: #191919;
+  font-size: 16px;
+  position: relative;
+  font-family: 'Myriad Pro Regular';
+  background: #f3f1f1;
+
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px;
+}
+
+.margin_0 {
+  margin: 0;
+}
+
+.container {
+  width: 1545px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+header {
+  background: #34a853;
+  z-index: 20;
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  height: 48px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-line {
+  width: 1px;
+  height: 28px;
+  background: #67be7e;
+  margin-left: 29px;
+  margin-right: 29px;
+}
+
+.nav-1 {
+  width: 25%;
+}
+
+.nav-2 {
+  width: 38%;
+}
+
+.nav-3 {
+  width: 37%;
+}
+
+.nav-3-button {
+  display: none;
+}
+
+.nav-3 p {
+  margin-top: 2px;
+}
+
+.nav a {
+  color: #fff;
+}
+
+.flexible {
+  display: flex;
+}
+
+.nav-3 img {
+  margin-right: 8px;
+}
+
+.email-orange {
+  display: none;
+}
+
+.menu {
+  height: 64px;
+  background: #e7e6e6;
+  position: fixed;
+  width: 100%;
+  top: 48px;
+  z-index: 15;
+}
+
+.menu .container {
+  height: 100%;
+  align-items: center;
+}
+
+.nav-button-container {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  color: #191919;
+}
+
+.logo-img {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img-mob {
+  display: none;
+}
+
+.logo-text {
+  font-size: 33px;
+  padding-top: 7px;
+  margin-left: 6px;
+}
+
+.logo-text-mobile {
+  display: none;
+}
+
+.searching {
+  width: 887px;
+  display: flex;
+  margin-left: 88px;
+  justify-content: center;
+  height: 35px;
+
+}
+
+/* select {
+-webkit-appearance:none;
+-moz-appearance:none;
+-ms-appearance:none;
+appearance:none;
+outline:0;
+box-shadow:none;
+border:0!important;
+background: #5c6664;
+background-image: none;
+flex: 1;
+padding: 0 .5em;
+color:#fff;
+cursor:pointer;
+font-size: 1em;
+font-family: 'Open Sans', sans-serif;
+} */
+.select {
+  position: relative;
+}
+
+.is-active .select-body {
+  display: block;
+}
+
+.select-header {
+  cursor: pointer;
+  background: #f1f1f1;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: solid #f1f1f1;
+  height: 100%;
+  display: flex;
+  padding-left: 16px;
+  color: #777777;
+  align-items: center;
+  padding-right: 25px;
+}
+
+.select-current {
+  white-space: nowrap;
+}
+
+.select-header:focus,
+.select-header:hover {
+  outline: none;
+}
+
+.select::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: #000 transparent transparent transparent;
+  right: 7px;
+  top: 16px;
+}
+
+.select-body {
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: #f1f1f1;
+  min-width: 210px;
+  padding-top: 11px;
+  padding-bottom: 30px;
+  position: absolute;
+  display: none;
+}
+
+.select-body-header {
+  padding-left: 17px;
+  padding-right: 35px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #777;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.select-item {
+  color: #373737;
+  font-size: 16px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 24px;
+  cursor: pointer;
+  padding-left: 17px;
+  padding-right: 35px;
+  white-space: nowrap;
+}
+
+.select-item:hover {
+  color: #34a853;
+  background-color: #f1f1f1;
+}
+
+.searching-line {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  border: none;
+}
+
+.searching-loupe {
+  margin-right:0;
+  width: 49px;
+  background: #faad3d;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: solid #faad3d;
+}
+
+.loupe-mob {
+  display: none;
+}
+
+.body-container {
+  width: 100%;
+  position: absolute;
+  top: 212px;
+}
+
+.suppliers {
+  margin-left: 49px;
+  display: flex;
+}
+
+.suppliers-icon {
+  background: url('../img/svg/suppliers.svg') no-repeat center;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+
+.suppliers-icon:hover {
+  background: url('../img/svg/suppliers-after.svg') no-repeat center;
+}
+
+.suppliers-text {
+  font-family: 'Myriad Pro Light SemiExtended';
+  font-size: 14px;
+  color: #777;
+  width: 95px;
+  margin-left: 6px;
+  margin-top: 5px;
+  line-height: 1.14em;
+}
+
+.menu-phone {
+  display: none
+}
+
+.basket {
+  margin-left: 38px;
+  display: flex;
+  height: 100%;
+  padding-top: 13px;
+}
+
+.basket:hover {
+  cursor: pointer;
+}
+
+.basket-icon {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 29px;
+  margin-left: 17px;
+}
+
+.basket-icon-count {
+  margin-left: 10px;
+  color: #ea8b00;
+  font-size: 12px;
+}
+
+.basket-icon-img {
+  position: absolute;
+  top: 9px;
+  width: 29px;
+  height: 27px;
+  background: url('../img/svg/basket.svg');
+}
+
+.basket-icon-img img {
+  display: none;
+}
+
+.basket-info {
+  display: flex;
+  margin-left: 12px;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.basket-text {
+  font-family: 'Myriad Pro Light SemiExtended';
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+  line-height: 16px;
+}
+
+.basket-sum {
+  white-space: nowrap;
+  line-height: 18px;
+}
+
+.basket-hover:hover {
+  background: #faad3d;
+}
+
+.basket-hover:hover .basket-icon-img {
+  background: url('../img/svg/basket-after.svg');
+}
+
+.basket-hover:hover .basket-sum,
+.basket-hover:hover .basket-icon-count,
+.basket-hover:hover .basket-text  {
+  color: #fff;
+}
+
+.offers-mob {
+  display: none;
+}
+
+.categories {
+  position: fixed;
+  top: 112px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.11);
+}
+
+.categories .container {
+  justify-content: space-between;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.category-name {
+  color: #373737;
+  margin-top: 6px;
+}
+
+/* стили для categories-slider */
+.categories-slider {
+  position: relative;
+}
+
+.categories-slider .slick-list {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.categories-slider .slick-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.categories-slider .slick-slide {
+  align-items: center;
+}
+
+/* Стрелки (arrows) */
+.categories-slider .slick-arrow {
+  height: 16px;
+  width: 16px;
+  border: none;
+  font-size: 0;
+  top: 28px;
+  border-top: 2px solid #373737;
+  border-right: 2px solid #373737;
+  transform: rotate(45deg);
+  background: transparent;
+}
+
+.categories-slider .slick-arrow.slick-disabled {
+  border-color: #92959d;
+}
+
+.categories-slider .slick-arrow.slick-prev {
+  left: 0;
+  position: absolute;
+  transform: rotate(-135deg);
+}
+
+.categories-slider .slick-arrow.slick-next {
+  right: 0;
+  position: absolute;
+}
+/* конец */
+
+.dropdown {
+  position: fixed;
+  padding-top: 212px;
+  width: 100%;
+  z-index: 5;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.502);
+  overflow: auto;
+}
+
+.dropdown-container {
+  display: flex;
+  min-height: 612px;
+}
+
+.dropdown-offers {
+  padding-top: 28px;
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  background: #fff;
+  border-right: 1px solid #ededed;
+}
+
+.dropdown-offer {
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.dropdown-offer:hover div {
+  color: #faad3d;
+}
+
+.dropdown-offer-bottom {
+  height: 44px;
+  border-bottom: none;
+}
+
+.dropdown-offer-name {
+  margin: 12px 0 12px 90px;
+  color: #333333;
+}
+
+.dropdown-offer-arrow {
+  color: #c2c2c2;
+  margin-right: 21px;
+  margin-left: 10px;
+}
+
+.dropdown-class {
+  width: 328px;
+  background-color: #f7f7f7;
+  padding-top: 32px;
+}
+
+.dropdown-class-type {
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+  padding-bottom: 16px;
+}
+
+.dropdown-class-type-name {
+  color: #191919;
+  font-family: 'Myriad Pro Light SemiExtended';
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.dropdown-class-type-name:hover {
+  color: #faad3d;
+}
+
+.dropdown-class-brand {
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  margin-top: 15.5px;
+}
+
+.dropdown-class-brand-name {
+  color: #333;
+  font-family: 'Myriad Pro Light SemiExtended';
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.dropdown-class-brand-name:hover {
+  color: #faad3d;
+}
+
+.dropdown-class-brand-header {
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 30px;
+  color: #777;
+  font-size: 18px;
+}
+
+.dropdown-class-country {
+  border-bottom: 1px solid #eee;
+  padding-left: 30px;
+  padding-bottom: 16px;
+  margin-top: 15.5px;
+}
+
+.dropdown-class-country-header {
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 30px;
+  color: #777;
+  font-size: 18px;
+}
+
+.dropdown-class-country a {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-class-country-name {
+  color: #333;
+  font-family: 'Myriad Pro Light SemiExtended';
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 7px;
+}
+
+.dropdown-class-country-name:hover {
+  color: #faad3d;
+}
+
+.dropdown-class-country img {
+  width: 22px;
+  height: 22px;
+}
+
+.dropdown-visual {
+  width: 441px;
+  background-color: #34a853;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.combi_steamer {
+  width: 307px;
+  margin-top: 56px;
+}
+
+.dropdown-visual-name {
+  margin-top: 44px;
+  font-size: 24px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #fff;
+}
+
+.dropdown-visual-button {
+  margin-top: 17px;
+  border-radius: 5px;
+  background-color: #faad3d;
+  width: 129px;
+  height: 35px;
+  align-items: center;
+  display: flex;
+}
+
+.dropdown-visual-button span {
+  font-family: 'Myriad Pro Regular';
+  color: #fff;
+  font-size: 18px;
+  margin: auto;
+}
+
+.dropdown-long {
+  border-left: 1px solid #e8e8e8;
+}
+
+.dropdown-long .dropdown-class-country {
+  border: none;
+}
+
+.dropdown-long .dropdown-class-brand {
+  margin-top: 0;
+  border: none;
+}
+
+.dropdown-long .dropdown-visual {
+  background-color: #faad3d;
+}
+
+.dropdown-long .dropdown-visual img {
+  width: 202px;
+  margin-top: 34px;
+}
+
+.dropdown-long .dropdown-visual-name {
+  margin-top: 30px;
+}
+
+.dropdown-long .dropdown-visual-button {
+  background-color: #191919;
+}
+
+.dropdown-open {
+  overflow: hidden;
+}
+
+.mix {
+  margin-top: 21px;
+}
+
+.mix .container {
+
+}
+
+.offers {
+  display: flex;
+  width: 303px;
+  flex-direction: column;
+}
+
+.offers:hover {
+  background: #fff;
+}
+
+.offer-header {
+  color: #faad3d;
+  font-size: 24px;
+  margin: 24px 10px 10px;
+  line-height: 1.2em;
+  margin-left: 28px;
+}
+
+.offer {
+  height: 45px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.offer-bottom {
+  height: 44px;
+  border-bottom: none;
+}
+
+.offer-name {
+  margin-left: 28px;
+  color: #333333;
+}
+
+.offer-arrow {
+  color: #c2c2c2;
+  margin-right: 21px;
+  margin-left: 10px;
+}
+
+.mix-slider {
+  width: 902px;
+  position: relative;
+}
+
+.mix-slider-1 {
+  background: url('../img/mix-slider-1.jpg') no-repeat right top / cover;
+}
+
+.mix-slider-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 68px;
+}
+
+.mix-slider-1-portfolio {
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #777777;
+  margin-top: 60px;
+}
+
+.mix-slider-1-name {
+  padding-top: 72px;
+  line-height: 42px;
+  font-size: 40px;
+  color: #fff;
+  width: 422px;
+}
+
+.mix-slider-1-description {
+  padding-top: 17px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #fff;
+}
+
+.mix-slider-1-more {
+  margin-top: 65px;
+  color: #fff;
+  font-size: 18px;
+  height: 35px;
+  width: 129px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #faad3d;
+  border-radius: 20px;
+  border: transparent 1px solid;
+}
+
+/* стили для mix-slider */
+.mix-slider .slick-list {
+  overflow: hidden;
+  height: 100%;
+}
+
+.mix-slider .slick-track {
+  display: flex;
+  height: 100%;
+}
+
+/* Точки (булиты) */
+.mix-slider .slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 33px;
+  width: 100%;
+
+}
+.mix-slider .slick-dots li{
+  list-style: none;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Элемент точки */
+.mix-slider .slick-dots button {
+  font-size: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+/* Элемент активной точки */
+.mix-slider .slick-dots li.slick-active button{
+  background-color: #fff;
+
+}
+
+
+/* конец */
+
+.mix-sale {
+  margin-left: 21px;
+  width: 300px;
+  background: #fff;
+  border: 2px solid #faad3d;
+}
+
+.mix-sale-content {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.sale-img {
+  margin-bottom: 12px;
+  width: 70px;
+}
+
+.sale-text {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #191919;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.sale-header {
+  margin-bottom: 21px;
+  font-size: 40px;
+  color: #191919;
+}
+
+.sale-catalog {
+  align-self: bottom;
+  margin-bottom: 49px;
+  color: #faad3d;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.brands {
+  margin-top: 20px;
+  height: 101px;
+}
+
+.brands .container {
+  height: 100%;
+  align-items: center;
+  background: #fff;
+}
+
+.brands-list {
+  width: 100%;
+  display: flex;
+}
+
+.brands-list li {
+  width: 16.6%;
+  display: flex;
+  align-items: center;
+}
+
+.brand-border-left {
+  border-left: 2px solid #f2f2f2;
+}
+
+.brands-list li a {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: #282828;
+  justify-content: center;
+}
+
+.all-brands {
+  font-size: 18px;
+}
+
+.special {
+  margin-top: 20px;
+  height: 432px;
+}
+
+.special .container {
+  height: 100%;
+}
+
+.proposals {
+  width: 1068px;
+  background: #fff;
+}
+
+.proposals-header {
+  display: flex;
+  height: 63px;
+  border-bottom: 1px solid #e8e8e8;
+  align-items: center;
+}
+
+.proposals-header-text {
+  font-size: 24px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #191919;
+  margin-left: 30px;
+}
+
+.proposals-header-arrow {
+  font-size: 24px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #bdbdbd;
+  margin-left: 20px;
+}
+
+.proposals-container {
+  height: 369px;
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+  display: flex;
+}
+
+.proposal-img-mob {
+  display: none;
+}
+
+.proposal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  padding: 0 15px;
+}
+
+.proposal-border {
+  border-right: 1px solid #e8e8e8;
+}
+
+.proposal-img {
+  margin-top: 53px;
+}
+
+.proposal-country {
+  margin-top: 23px;
+}
+
+.proposal-name {
+  margin-top: 14px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  text-align: center;
+}
+
+.proposal-price {
+  font-family: 'Myriad Pro Semibold';
+}
+
+.proposal-logo {
+  margin-top: 10px;
+}
+
+.service-slider {
+  margin-left: 21px;
+  width: 456px;
+  position: relative;
+}
+
+.service-slider-1 {
+  background: url('../img/service.jpg') no-repeat center top / cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-content {
+  margin-left: 54px;
+  margin-bottom: 73px;
+}
+
+.service-name {
+  font-size: 40px;
+  margin-bottom: 3px;
+  color: #fff;
+}
+
+.service-desc {
+  margin-bottom: 26px;
+  color: #fff;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.service-more {
+  display: flex;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #fff;
+  width: fit-content;
+}
+
+.service-more-arrow {
+  margin-left: 9px;
+}
+
+/* стили для service-slider */
+.service-slider .slick-list {
+  overflow: hidden;
+  height: 100%;
+}
+
+.service-slider .slick-track {
+  display: flex;
+  height: 100%;
+}
+
+/* Точки (булиты) */
+.service-slider .slick-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 28px;
+  width: 100%;
+
+}
+.service-slider .slick-dots li{
+  list-style: none;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Элемент точки */
+.service-slider .slick-dots button {
+  font-size: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+/* Элемент активной точки */
+.service-slider .slick-dots li.slick-active button{
+  background-color: #fff;
+
+}
+
+
+/* конец */
+
+.news {
+  margin-top: 171px;
+}
+
+.news-js {
+  cursor: pointer;
+}
+
+.news-container {
+  margin-left: 77px;
+  width: 1413px;
+}
+
+.news-section-header {
+  color: #191919;
+  font-size: 40px;
+}
+
+.news-body {
+  margin-top: 49px;
+  display: flex;
+  margin-bottom: 51px;
+}
+
+.news-last {
+  width: 490px;
+}
+
+.news-info {
+  /* height: 254px; */
+}
+
+.news-header {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-header-maker {
+  color: #34a853;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.news-header-date {
+  color: #777777;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.news-name {
+  font-size: 24px;
+  margin-top: 10px;
+  line-height: 1.2em;
+  color: #191919;
+}
+
+.news-description {
+  margin-top: 18px;
+  color: #191919;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.news-other {
+  margin-left: 40px;
+
+}
+
+.news-other-one {
+  display: flex;
+  margin-top: 43px;
+}
+
+.news-image {
+  height: 168px;
+}
+
+.top-zero {
+  margin-top: 0;
+}
+
+.news-info-marginleft {
+  margin-left: 21px;
+}
+
+.news-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 167px;
+  height: 35px;
+  border: 2px solid #282828;
+  border-radius: 17.5px;
+  color: #191919;
+}
+
+.recomend {
+  margin-top: 154px;
+}
+
+.recomend-container {
+  margin-left: 82px;
+  width: 89.85%;
+  display: flex;
+  flex-direction: column;
+}
+
+.recomend-header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 658px;
+  text-align: center;
+}
+
+.recomend-header-title {
+  color: #282828;
+  font-size: 40px;
+}
+
+.recomend-header-text {
+  color: #777777;
+  font-family: 'Myriad Pro Light SemiExtended';
+  margin-top: 18px;
+}
+
+.recomend-string {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 66px;
+}
+
+.recomend-1 {
+  cursor: pointer;
+  width: 56.62%;
+  background: url('../img/unox-img.jpg') no-repeat left center / cover;
+  height: 483px;
+}
+
+.recomend-1 .recomend-info {
+  margin-left: 288px;
+  margin-top: 173px;
+  width: 50.2%;
+}
+
+.recomend-brand {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Myriad Pro Light SemiExtended';
+  text-transform: uppercase;
+}
+
+.recomend-name {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.recomend-desc {
+  margin-top: 25px;
+  color: #777777;
+  font-family: 'Myriad Pro Light SemiExtended';
+
+}
+
+.recomend-2-3 {
+  background: #fff;
+  margin-left: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.recomend-2-3 .recomend-info {
+  width: 90%;
+}
+
+.recomend-2-3 .recomend-brand {
+  margin-top: 8px;
+  color: #191919;
+}
+.recomend-2-3 .recomend-name {
+  color: #191919;
+}
+
+.recomend-2-3 .recomend-desc {
+  color: #777;
+}
+
+.simeco-img {
+  margin-top: 34px;
+  margin-bottom: 25px;
+}
+
+.hallde-img {
+  margin-top: 49px;
+  margin-bottom: 26px;
+}
+
+.recomend-string-2 {
+  margin-top: 9px;
+}
+
+.recomend-4 {
+  cursor: pointer;
+  width: 42%;
+  background: url('../img/rational-img.jpg') no-repeat left bottom / cover;
+  height: 745px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.recomend-5 {
+  margin-bottom: 10px;
+  cursor: pointer;
+  height: 56.24%;
+  background: url('../img/abat-img.jpg') no-repeat left center / cover;
+}
+
+.recomend-6 {
+  cursor: pointer;
+
+  background: url('../img/hicold-img.jpg') no-repeat right bottom / cover;
+  height: 100%;
+}
+
+.flex-dir-column {
+  flex-direction: column;
+}
+
+.recomend-4 .recomend-info {
+  width: 50.42%;
+  margin-top: 67px;
+}
+
+.recomend-4 .recomend-brand,
+.recomend-4 .recomend-name,
+.recomend-6 .recomend-brand,
+.recomend-6 .recomend-name {
+  color: #191919;
+}
+
+.recomend-5 .recomend-info {
+  width:50%;
+  margin-top: 119px;
+  margin-left: 31.55%;
+}
+.recomend-5 .recomend-name {
+  width: 60%;
+}
+
+.recomend-6 .recomend-info {
+  padding-top: 94px;
+  width: 51%;
+  margin-left: 7.95%;
+}
+
+.info {
+  margin-top: 226px;
+}
+
+.info-container {
+  margin-left: 82px;
+  width: 89.85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.solutions-offer {
+  width: 60.45%;
+}
+
+.solutions-header {
+  font-size: 40px;
+  line-height: 1.2em;
+}
+
+.solutions-desc {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 1.17em;
+}
+
+.info-offer {
+  margin-top: 32px;
+  width: 60.45%;
+}
+
+.info-offer-header {
+  font-size: 40px;
+  line-height: 1.2em;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.info-offer-desc {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 1.17em;
+}
+
+.info-btn {
+  margin-top: 42px;
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  background: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-btn p {
+  font-size: 24px;
+  color: #fff;
+}
+
+.info-company {
+  margin-top: 56px;
+  width: 265px;
+  margin-right: 48px;
+}
+
+.company-logo {
+
+}
+
+.company-name {
+  font-size: 40px;
+  margin-top: 33px;
+}
+
+.company-desc {
+  color: #777;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.company-type {
+  color: #1d1d1d;
+  font-size: 24px;
+  margin-top: 36px;
+}
+
+.company-indicators {
+  margin: 3px 0 21px;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #777;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.company-indicator {
+  line-height: 1.2;
+  font-size: 18px;
+  color: #1d1d1d;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.clients {
+  margin-top: 135px;
+}
+
+.clients-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.clients-header {
+  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.clients-content {
+  margin-top: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.client-img {
+  height: 101px;
+  display: flex;
+  align-items: center;
+}
+
+.client-img img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-js {
+  cursor: pointer;
+  width: 203px;
+  margin-bottom: 60px;
+}
+
+.clients-content p {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #373737;
+  font-family: 'Myriad Pro Light SemiExtended';
+  line-height: 1.14em;
+  text-align: center;
+}
+
+.clients-button {
+  display: none;
+}
+
+.footer-menu {
+  margin-top: 188px;
+  height: 482px;
+  background: #282828;
+  padding-top: 93px;
+}
+
+.footer-menu-container {
+  margin-left: 82px;
+  width: 89.85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item-hidden {
+  display: none;
+}
+
+.footer-menu-header {
+  color: #777;
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.footer-menu a {
+  color: #fff;
+  line-height: 1.5em;
+  font-family: 'Myriad Pro Light SemiExtended';
+}
+
+.footer-menu-contacts a {
+  line-height: 1.25em;
+}
+
+.footer-menu-contacts-header {
+  margin-bottom: 22px;
+}
+
+.footer-menu-contacts div {
+  margin-top: 18px;
+  width: 185px;
+}
+
+footer {
+  height: 124px;
+  background: #1f1f1f;
+}
+
+.footer-container {
+  margin-top: 42px;
+  margin-left: 82px;
+  width: 89.85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-company {
+  display: flex;
+  cursor: pointer;
+}
+
+.footer-company div {
+  margin-left: 17px;
+}
+
+.footer-company-logo-mob {
+  display: none;
+}
+
+.footer-company-desc {
+  line-height: 1.125em;
+  color: #777;
+}
+
+.footer-company-header {
+  font-size: 24px;
+  color: #fff;
+}
+
+.footer-developers {
+  font-size: 18px;
+  font-family: 'Myriad Pro Light SemiExtended';
+  color: #fff;
+}
+
+
+/* Responsive starts here */
+
+@media screen and (max-width: 1920px) {
+  .container {
+    width: 80.47%;
+  }
+
+  .mix-slider {
+    width: 58.38%;
+  }
+
+  .service-slider {
+    width: 29.5%;
+  }
+
+  .service-content {
+    margin-left: 11.84%;
+    width: 74.6%;
+  }
+
+  .news-container {
+    margin: 0 auto;
+    width: 100%%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  header {
+    font-size: 14px;
+  }
+
+  .nav-1 {
+    width: 23%;
+  }
+
+  .nav-2 {
+    width: 33%;
+  }
+
+  .nav-3 {
+    width: 35%;
+  }
+
+  .nav-3 p {
+    margin-top: 3.2px;
+  }
+
+  .nav-line {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .recomend-5 .recomend-info {
+    margin-left: 40%;
+  }
+  .recomend-6 .recomend-info {
+    margin-left: 4%;
+    width: 47%;
+  }
+
+  .clients-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+
+  .body-container {
+
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
+
+  /* стили categories-slider */
+  .categories-slider {
+    padding-left: 22px;
+    padding-right: 22px;
+    position: relative;
+  }
+
+  .categories-slider .slick-list {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .categories-slider .slick-track {
+    display: flex;
+    height: 100%;
+  }
+
+  .categories-slider .slick-slide {
+    align-items: center;
+  }
+  /* конец */
+
+  .dropdown-offer-name {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-1 {
+    width: 29%;
+  }
+
+  .nav-2 {
+    width: 40%;
+  }
+
+  .nav-3 {
+    width: 21%;
+  }
+
+  .nav-3 .flexible p {
+    display: none;
+  }
+
+  .menu .container {
+    justify-content: space-between;
+  }
+
+  .searching {
+    width: 50%;
+    margin-left: 40px;
+  }
+
+  .suppliers {
+    margin-left: 40px;
+  }
+
+  .basket {
+    margin-left: 20px;
+  }
+
+  .mix-slider {
+    width: 45%;
+  }
+
+  .mix-slider-1 {
+    background: url('../img/mix-slider-1.jpg') no-repeat 60% top / cover;
+  }
+
+  .mix-slider-container {
+    width: 50%;
+  }
+
+  .mix-slider-1-name {
+    width: auto;
+    padding-top: 30px;
+  }
+
+  .mix-slider-1-more {
+    margin-top: 50px;
+  }
+
+  .news-container {
+    width: 90%;
+  }
+
+  .news-section-header {
+    text-align: center;
+  }
+
+  .news-body {
+    flex-direction: column;
+  }
+
+  .news-last {
+    display: flex;
+    width: 100%;
+  }
+
+  .news-img {
+    width: 190px;
+    height: 137px;
+  }
+
+  .news-info {
+    margin-left: 21px;
+  }
+
+  .news-header {
+    margin: 0;
+  }
+
+  .news-other {
+    margin: 43px 0 0 0;
+  }
+
+  .recomend-container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .recomend-string {
+    justify-content: space-between;
+  }
+
+  .recomend-1 {
+    height: 400px;
+  }
+
+  .recomend-1, .recomend-4 {
+    width: 100%;
+  }
+
+  .recomend-2 {
+    margin-top: 10px;
+  }
+
+  .recomend-3 {
+    margin: 10px 0 0 10px;
+  }
+
+  .recomend-2-3 {
+    margin-left: 0;
+  }
+
+  .recomend-2-3 .recomend-info {
+    margin-bottom: 20px;
+  }
+
+  .recomend-4 {
+    background:url('../img/rational-img.jpg') no-repeat right 30%/ cover;
+    margin-right: 0;
+    height: 500px;
+  }
+
+  .recomend-4 .recomend-info {
+    width: 80%;
+    margin-top: 50px;
+  }
+
+  .recomend-5 {
+    margin-top: 10px;
+    height: 400px;
+  }
+
+  .recomend-6 {
+    height: 400px;
+  }
+
+  .recomend-6 .recomend-info {
+    width: 40%;
+  }
+
+  .info-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .info-company {
+    margin-right: 0;
+  }
+
+  .clients .container {
+    max-width: 800px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  header .container {
+    width: 98%;
+  }
+
+  .mix-slider-container {
+    margin-left: 40px;
+  }
+
+  .brands {
+    height: unset;
+  }
+
+  .brands-list {
+    flex-wrap: wrap;
+    height: unset;
+  }
+
+  .brands-list li {
+    width: 33%;
+    height: 101px;
+
+  }
+
+  .brands-list li a {
+    height: 71px;
+  }
+
+  .brand-border-top {
+    border-top: 2px solid #f2f2f2;
+  }
+
+  .recomend-container {
+    width: 75%;
+  }
+
+  .recomend-header {
+    width: 90%;
+  }
+
+  .recomend-1 .recomend-info {
+    margin-left: 250px;
+  }
+
+  .recomend-6 {
+    background: url('../img/hicold-img.jpg') no-repeat 70% center/ cover;
+  }
+
+  .recomend-6 .recomend-info {
+    margin-left: 10%;
+  }
+
+  .solutions {
+    width: 80%;
+  }
+
+  .info-offer {
+    width: 90%;
+  }
+
+  .footer-menu-container {
+    width: 100%;
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  .footer-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+
+  header .container {
+    width: 95%;
+  }
+
+  .nav-1 {
+    width: 33%;
+  }
+
+  .nav-2 {
+    width: 52%;
+  }
+
+  .nav-3 {
+    display: none;
+  }
+
+  .nav-3 .flexible p {
+    display: flex;
+  }
+
+  .email-green {
+    display: none;
+  }
+
+  .email-orange {
+    display: block;
+  }
+
+  .nav-line {
+    display: none;
+  }
+
+  .nav-3-button {
+    display: flex;
+    height: 20px;
+    color: #fff;
+    background: #faad3d;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .nav-3-button-active::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 13px;
+    border: 8px solid transparent; /* Прозрачные границы */
+    border-bottom: 17px solid #faad3d; /* Добавляем треугольник */
+  }
+
+  .nav-3-dropdown {
+    height: 164px;
+    display: flex;
+    width: 165px;
+    padding: 20px 15px;
+    flex-direction: column;
+    position: fixed;
+    background: #faad3d;
+    right: 0;
+    top: 48px;
+    z-index: 30;
+    align-items: center;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .dropdown-offer-name {
+    margin-left: 20px;
+  }
+
+  .dropdown-class ul {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mix-slider {
+    width: 40%;
+  }
+
+  .mix-sale-content {
+    padding: 0 10px;
+  }
+
+  .offers {
+    min-width: 180px;
+  }
+
+  .offers .offer-header,
+  .offers .offer-name {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .nav-1 {
+    width: 35%;
+  }
+
+  .nav-2 {
+    width: 55%;
+  }
+}
+
+/* Мобильная версия */
+@media screen and (max-width: 768px) {
+
+  .container {
+    height: 100%;
+    margin: 0 30px;
+    width: auto;
+  }
+
+  header {
+    /* display: none; */
+    display: block;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.502);
+    transition-delay: 0.5s;
+  }
+
+  header .container {
+    width: 50%;
+  }
+
+  .header-active {
+    left: 0;
+    transition-delay: 0s;
+  }
+
+  .header-container {
+    position: absolute;
+    left: -50%;
+    width: auto;
+    background: #34a853;
+    margin: 0;
+    width: 50%;
+    height: auto;
+    transition: left 0.4s linear;
+  }
+
+  .header-container-active {
+    left: 0;
+    transition: left 0.4s linear;
+  }
+
+  .nav {
+    flex-direction: column;
+    margin: 100px 0 50px 30px;
+    align-items: baseline;
+    height: auto;
+  }
+
+  .nav-section {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .nav-section a {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .nav-section a p {
+    margin: 0;
+  }
+
+  .nav-3 {
+    display: flex;
+  }
+
+  .email-orange {
+    display: none;
+  }
+
+  .email-green {
+    display: block;
+  }
+
+  .nav-3-phone {
+    display: none;
+  }
+
+  .nav-3-button {
+    display: none;
+  }
+
+  .menu {
+    top: 0;
+    height: 101px;
+    background: #f1f1f1;
+    border-bottom: solid 2px #e5e5e5;
+  }
+
+  .nav-button-container {
+    z-index: 25;
+    position: fixed;
+    width: 73px;
+    height: 73px;
+    background: #faad3d;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 30px;
+    top: 12px;
+  }
+
+  .nav-button {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+  }
+
+  .nav-button::before {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: -10px;
+    transition: 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .nav-button::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    transition: 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .nav-button.nav-button-active {
+    background: transparent;
+  }
+
+  .nav-button.nav-button-active::before {
+    transform: rotate(45deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .nav-button.nav-button-active::after {
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .logo {
+    align-items: center;
+    margin-left: 104px;
+  }
+
+  .logo-img {
+    display: none;
+  }
+
+  .logo-img-mob {
+    display: block;
+  }
+
+  .logo-text {
+    display: block;
+    width: 190px;
+    padding-top: 0;
+    margin-left: 11px;
+  }
+
+  .logo-text-header {
+    font-size: 30px;
+  }
+
+  p.logo-text-mobile {
+    display: block;
+    font-size: 18px;
+    font-family: 'Myriad Pro Light SemiExtended';
+    color: #777777;
+    word-spacing: 0.2em;
+  }
+
+  .searching {
+    margin-left: auto;
+    height: auto;
+    width: 50px;
+  }
+
+  .select,
+  .searching-line {
+    display: none;
+  }
+
+  .searching-loupe {
+    background: transparent;
+    border: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .loupe-desc {
+    display: none;
+  }
+
+  .loupe-mob {
+    display: block;
+  }
+
+  .suppliers {
+    display: none;
+  }
+
+  .menu-phone {
+    display: block;
+    margin-left: 40px;
+  }
+
+  .basket {
+    padding: 0;
+    height: 70px;
+    margin: 0 0 12px 31px;
+  }
+
+  .basket-icon {
+    width: auto;
+    margin: 0;
+  }
+
+  .basket-icon-count {
+    font-size: 25.25px;
+    color: #fda11c;
+    font-family: 'Myriad Pro Light SemiExtended';
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+
+  .basket-icon-img {
+    background: url('../img/svg/basket-mob.svg') no-repeat;
+    width: 58px;
+    height: 50px;
+    top: 17px;
+  }
+
+  .basket-info {
+    display: none;
+  }
+
+  .basket-hover {
+    all: initial;
+    cursor: pointer;
+  }
+
+  .categories {
+    display: none;
+  }
+
+  .body-container {
+    top: 101px;
+  }
+
+  .offers-mob {
+    height: 81px;
+    display: block;
+    align-items: center;
+    font-family: 'Myriad Pro Light SemiExtended';
+  }
+
+  .offer-mob {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .offer-mob-name {
+    font-size: 30px;
+    color: #000;
+    height: auto;
+  }
+
+  .offer-mob-arrow {
+    color: #777;
+    font-size: 30px;
+  }
+
+  .mix {
+    margin: 0;
+  }
+
+  .mix .container {
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .offers {
+    display: none;
+  }
+
+  .mix-slider {
+    width: 100%;
+    height: 556px;
+  }
+
+  /* СТИЛИ MIX SLIDER  В МОБИЛЬНОЙ ВЕРСИИ*/
+  .mix-slider-1 {
+    background: url('../img/mix-slider-1.jpg') no-repeat top / cover;
+  }
+
+  .mix-slider-container {
+    margin-left: 33px;
+    width: 372px;
+    align-items: flex-start;
+  }
+
+  .mix-slider-1-portfolio {
+    margin-top: 94px;
+    font-size: 25px;
+  }
+
+  .mix-slider-1-name {
+    padding-top: 50px;
+    line-height: 52px;
+  }
+
+  .mix-slider-1-description {
+    line-height: 1.32em;
+    padding-top: 30px;
+    font-size: 25px;
+  }
+
+  .mix-slider-1-more {
+    border-radius: 26.5px;
+    height: 53px;
+    margin-top: 36px;
+    font-size: 30px;
+    padding: 0 34px;
+    width: auto;
+  }
+
+  .mix-slider-1-more span {
+    width: auto;
+  }
+
+  /* стили для mix-slider */
+  .mix-slider .slick-list {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .mix-slider .slick-track {
+    display: flex;
+    height: 100%;
+  }
+
+  /* Точки (булиты) */
+  .mix-slider .slick-dots{
+    bottom: 36px;
+  }
+
+  /* Стрелки (arrows) */
+  .mix-slider .slick-arrow {
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+    height: 26px;
+    width: 12px;
+    font-size: 0;
+    border: 0;
+  }
+
+  .mix-slider .slick-arrow.slick-prev {
+    left: 35px;
+    background: url('../img/svg/arrow-mob-left.svg') no-repeat;
+  }
+
+  .mix-slider .slick-arrow.slick-next {
+    right: 35px;
+    background: url('../img/svg/arrow-mob-right.svg') no-repeat;
+  }
+
+  .mix-slider .slick-prev.slick-disabled {
+    left: -1000px;
+  }
+
+  .mix-slider .slick-next.slick-disabled {
+    right: 1000px;
+  }
+
+  /* конец */
+
+  .mix-sale {
+    margin: 30px 30px 0;
+    width: auto;
+    height: 476px;
+  }
+
+  .mix-sale-content {
+    padding: 80px 0 0 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .sale-img {
+    height: 146px;
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  .sale-text {
+    line-height: normal;
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .sale-header {
+    line-height: normal;
+    font-size: 50px;
+    margin-bottom: 38px;
+  }
+
+  .sale-catalog {
+    margin: 0;
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .brands {
+    margin-top: 30px;
+  }
+
+  .brands-list li {
+    width: 50%;
+  }
+
+  .special {
+    margin-top: 30px;
+    height: auto;
+  }
+
+  .special .container {
+    flex-direction: column;
+  }
+
+  .proposals {
+    width: auto;
+  }
+
+  .proposals-header {
+    border-bottom: none;
+  }
+
+  .proposals-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .proposals-container .flex-1 {
+    align-items: center;
+    height: 340px;
+    position: relative;
+    border-top: 2px solid #f3f2f2;
+  }
+
+  .proposal {
+    width: 100%;
+    padding: 0;
+    padding-left: 55%;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .proposal-border {
+    border-right: 0;
+
+  }
+
+  .proposal-img-mob {
+    display: block;
+    position: absolute;
+    margin-left: 35px;
+  }
+
+  .proposal-img {
+    display: none;
+  }
+
+  .proposal-country {
+    margin: 0;
+    height: 30px;
+  }
+
+  .proposal-name {
+    margin-top: 40px;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .proposal-price {
+    margin-top: 35px;
+    font-size: 30px;
+  }
+
+  .proposal-logo {
+    margin-top: 29px;
+    width: 120px;
+  }
+
+  /* SERVICE-SLIDER (мобильная версия) */
+
+  .service-slider {
+    margin: 30px 0 0;
+    width: 100%;
+    height: 556px;
+  }
+
+  .service-slider-1 {
+    background: url('../img/service.jpg') no-repeat right top / cover;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .service-content {
+    margin-left: 35px;
+  }
+
+  .service-name {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  .service-desc {
+    margin-bottom: 26px;
+    font-size: 30px;
+  }
+
+  .service-more {
+    font-family: 'Myriad Pro Regular';
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .service-more-arrow {
+    margin-left: 13px;
+  }
+
+  /* стили для service-slider */
+  .service-slider .slick-list {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .service-slider .slick-track {
+    display: flex;
+    height: 100%;
+  }
+
+  /* Точки (булиты) */
+  .service-slider .slick-dots{
+    bottom: 36px;
+  }
+
+  /* Стрелки (arrows) */
+  .service-slider .slick-arrow {
+    position: absolute;
+    bottom: 30px;
+    z-index: 1;
+    height: 26px;
+    width: 12px;
+    font-size: 0;
+    border: 0;
+  }
+
+  .service-slider .slick-arrow.slick-prev {
+    left: 40px;
+    background: url('../img/svg/arrow-mob-left.svg') no-repeat;
+  }
+
+  .service-slider .slick-arrow.slick-next {
+    right: 40px;
+    background: url('../img/svg/arrow-mob-right.svg') no-repeat;
+  }
+
+  .service-slider .slick-prev.slick-disabled {
+    left: -1000px;
+  }
+
+  .service-slider .slick-next.slick-disabled {
+    right: 1000px;
+  }
+
+  /* конец */
+
+  .news {
+    display: none;
+  }
+
+  /* Блок "РЕКОМЕНДУЕМ" */
+
+  .recomend {
+    margin-top: 140px;
+  }
+
+  .recomend-container {
+    width: 100%;
+    align-items: center;
+  }
+
+  .recomend-container .flex-1 {
+    flex:auto;
+  }
+
+  .recomend-header {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .recomend-header-title {
+    font-size: 50px;
+  }
+
+  .recomend-header-text {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+
+  .recomend-string {
+    margin-top: 58px;
+  }
+
+  .recomend-string-2 {
+    margin-top: 10px;
+  }
+
+  .recomend-1,
+  .recomend-2,
+  .recomend-3,
+  .recomend-4,
+  .recomend-5,
+  .recomend-6 {
+    height: 483px;
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .recomend-1 .recomend-info {
+    margin-left: 245px;
+    margin-top: 118px;
+  }
+
+  .recomend-1 .recomend-brand {
+    font-size: 30px;
+  }
+
+  .recomend-1 .recomend-name {
+    font-size: 40px;
+    margin-top: 23px;
+  }
+
+  .recomend-1 .recomend-desc {
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 1.1em;
+  }
+
+  .recomend-2-3 {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recomend-2-3 .recomend-info {
+    margin: 0 0 0 50px;
+    width: 55%;
+  }
+
+  .recomend-2-3 .recomend-brand {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .recomend-2-3 .recomend-name {
+    font-size: 40px;
+    margin-top: 23px;
+  }
+
+  .recomend-2-3 .recomend-desc {
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 1.1em;
+  }
+
+  .recomend-2 img {
+    height: 407px;
+    position: absolute;
+    margin: 0;
+    top: 38px;
+    right: 39px;
+  }
+
+  .recomend-3 img {
+    height: 407px;
+    position: absolute;
+    margin: 0;
+    top: 38px;
+    right: 39px;
+  }
+
+  .recomend-string-2 .recomend-info {
+    margin: 0 0 0 50px;
+    padding: 0;
+    width: 50%;
+  }
+
+  .recomend-string-2 .recomend-brand {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .recomend-string-2 .recomend-name {
+    font-size: 40px;
+    margin-top: 23px;
+  }
+
+  .recomend-string-2 .recomend-desc {
+    margin-top: 50px;
+    font-size: 25px;
+    line-height: 1.1em;
+  }
+
+  .recomend-4 {
+    background: url('../img/unox-mob.jpg') no-repeat center 20% /cover;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .recomend-4 .recomend-info {
+    margin-top: 0;
+  }
+
+  .recomend-5 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .recomend-5 .recomend-info {
+    margin: 0 36px 0 0;
+  }
+
+  .recomend-6 {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+  }
+
+  .info {
+    margin-top: 152px;
+  }
+
+  .info .container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .info-container {
+    margin: 0 30px;
+    width: auto;
+    flex-direction: column-reverse;
+  }
+
+  .info-company {
+    margin: 0 54px;
+    width: auto;
+  }
+
+  .info-company img {
+    height: 249px;
+  }
+
+  .company-name {
+    font-size: 50px;
+  }
+
+  .company-desc {
+    font-size: 25px;
+  }
+
+  .company-type {
+    font-size: 40px;
+  }
+
+  .company-indicators {
+    font-size: 30px;
+  }
+
+  .company-indicator {
+    font-size: 30px;
+  }
+
+  .solutions-offer {
+    margin-top: 135px;
+    width: auto;
+  }
+
+  .solutions {
+    width: auto;
+    margin-right: 20px;
+  }
+
+  .solutions-header {
+    font-size: 50px;
+  }
+
+  .solutions-desc {
+    margin-top: 56px;
+    font-size: 30px;
+  }
+
+  .info-offer {
+    display: none;
+  }
+
+  .info-btn {
+    margin-top: 56px;
+  }
+
+  .clients {
+    margin-top: 140px;
+  }
+
+  .clients-content {
+    justify-content: space-around;
+  }
+
+  .client-js {
+    width: 250px;
+  }
+
+  .client-js p {
+    margin-top: 10px;
+    font-size: 25px;
+  }
+
+  .clients-button {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 60px;
+    align-items: center;
+    font-family: 'Myriad Pro Light SemiExtended';
+  }
+
+  .clients-button div {
+    display: flex;
+    font-size: 50px;
+    height: 100px;
+    width: 100px;
+    background: #282828;
+    border-radius: 50%;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clients-button p {
+    margin-top: 14px;
+    font-size: 30px;
+    color: #000;
+  }
+
+  .clients-button-hidden {
+    display: none;
+  }
+
+  .client-hidden {
+    display: none;
+  }
+
+  .footer-menu {
+    margin-top: 84px;
+    height: auto;
+    padding: 45px 0 40px;
+  }
+
+  .footer-menu .container {
+    margin: 0 47px;
+  }
+
+  .footer-menu-container {
+    display: block;
+  }
+
+  .footer-menu-item {
+    border-top: 1px solid #4b4b4b;
+  }
+
+  .footer-menu-item-top {
+    border: none;
+  }
+
+  .footer-item-hidden {
+    display: block;
+  }
+
+  .footer-menu-item ul {
+    padding: 0 30px 10px;
+    font-size: 20px;
+  }
+
+  .footer-menu-item ul li {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .footer-ul-hidden {
+    display: none;
+  }
+
+  .footer-menu-header {
+    font-size: 30px;
+    font-family: 'Myriad Pro Light SemiExtended';
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    margin: 0;
+    height: 96px;
+    width: 100%;
+  }
+
+  .menu-item-sign {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item-sign {
+    height: 2px;
+    width: 16px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+  }
+
+  .menu-item-sign-active .item-sign::after {
+    content: '';
+    height: 16px;
+    width: 2px;
+    background: #fff;
+    border-radius: 1px;
+  }
+
+  .footer-menu-item .footer-menu-contacts li {
+    padding: 5px 0;
+  }
+
+
+
+  footer {
+    height: 239px;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-company {
+    height: 88px;
+    align-items: center;
+  }
+
+  .footer-company img {
+    width: 88px;
+  }
+
+  .footer-company-logo {
+    display: none;
+  }
+
+  .footer-company-logo-mob {
+    display: block;
+  }
+
+  .footer-company div {
+    margin-top: 4px;
+  }
+
+  .footer-company-header {
+    font-size: 50px;
+  }
+
+  .footer-company-desc {
+    font-size: 30px;
+  }
+
+  .footer-developers {
+    margin-top: 38px;
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 651px) {
+
+  .logo-img-mob,
+  .loupe-mob,
+  .menu-phone img {
+    height: 50px;
+  }
+
+  .basket {
+    height: 50px;
+  }
+
+  .basket-icon-img {
+    background: none;
+    width: auto;
+    height: auto;
+  }
+
+  .basket-icon-img img {
+    display: block;
+    height: 40px;
+  }
+
+  .basket-icon-count {
+    font-size: 20px;
+    margin-left: 18px;
+  }
+
+
+  .logo-text {
+    display: none;
+  }
+
+  .searching,
+  .menu-phone,
+  .basket {
+    margin-left: 20px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .offers-mob {
+    height: 50px;
+  }
+
+  .offer-mob div{
+    font-size: 20px;
+  }
+
+  .mix-slider {
+    height: 70vw;
+  }
+
+  .mix-slider-container {
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .mix-slider-1-portfolio {
+    font-size: 20px;
+    margin-top: 10%;
+  }
+
+  .mix-slider-1-name {
+    font-size: 25px;
+    padding-top: 0;
+    margin-top: auto;
+  }
+
+  .mix-slider-1-description {
+    font-size: 20px;
+    padding-top: 0;
+  }
+
+  .mix-slider-1-more {
+    margin-top: auto;
+    margin-bottom: 70px;
+    font-size: 20px;
+    height: 35px;
+    padding: 0 20px;
+  }
+
+  .mix-sale {
+    height: 380px;
+  }
+
+  .mix-sale-content img {
+    height: 100px;
+  }
+
+  .sale-text {
+    font-size: 20px;
+  }
+
+  .sale-header {
+    font-size: 35px;
+  }
+
+  .sale-catalog {
+    font-size: 20px;
+  }
+
+  .proposals-header {
+    height: 50px;
+  }
+
+  .proposals-header-text,
+  .proposals-header-arrow {
+    font-size: 20px;
+  }
+
+  .proposals-container .flex-1 {
+    flex-direction: column;
+  }
+
+  .proposal-img-mob {
+    position: static;
+    margin: 30px 0 0;
+    width: 40vw;
+  }
+
+  .proposal {
+    padding: 0;
+    margin: 30px 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .proposal-country {
+    height: 20px;
+  }
+
+  .proposal-logo {
+    margin-top: 10px;
+    width: 80px;
+  }
+
+  .proposal-name,
+  .proposal-price {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .service-slider {
+    height: 70vw;
+  }
+
+  .service-slider-1 {
+    background: url('../img/service.jpg') no-repeat bottom / cover
+  }
+
+  .service-slider-1 .service-content {
+    margin: 0;
+    padding: 0 0 73px 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 55%;
+  }
+
+  .service-name {
+    font-size: 30px;
+    margin-top: auto;
+  }
+
+  .service-desc {
+    font-size: 20px;
+    margin: 0 0 auto;
+  }
+
+  .service-more {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .recomend {
+    margin-top: 100px;
+  }
+
+  .recomend-header-title {
+    font-size: 30px;
+  }
+
+  .recomend-header-text {
+    font-size: 20px;
+  }
+
+  .recomend-js,
+  .recomend-2,
+  .recomend-3 {
+    height: 55vw;
+  }
+
+  .recomend-1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('../img/unox-img.jpg') no-repeat 36% center / cover;
+  }
+
+  .recomend-1 .recomend-info {
+    margin: 0 25px 0 0;
+    min-width: 220px;
+  }
+
+  .recomend-js .recomend-brand {
+    font-size: 20px;
+  }
+
+  .recomend-js .recomend-name {
+    display: inline-block;
+    font-size: 25px;
+    margin-top: 10px;
+  }
+
+  .recomend-js .recomend-desc {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .recomend-2 img,
+  .recomend-3 img {
+    height: 70%;
+    top: 50px;
+  }
+
+  .recomend-2 .recomend-info,
+  .recomend-3 .recomend-info {
+    width: 46%;
+    margin-left: 6%;
+  }
+
+  .recomend-4  .recomend-info {
+    margin-left: 6%;
+  }
+
+  .recomend-5  .recomend-info {
+    margin-right: 6%;
+  }
+
+  .recomend-6  .recomend-info {
+    margin-left: 6%;
+  }
+
+  .info {
+    margin-top: 100px;
+  }
+
+  .info-company {
+    margin: 0 30px;
+  }
+
+  .info-company img {
+    height: 130px;
+  }
+
+  .company-name {
+    font-size: 30px;
+  }
+
+  .company-desc {
+    font-size: 20px;
+  }
+
+  .company-type {
+    font-size: 25px;
+  }
+
+  .company-indicators {
+    font-size: 20px;
+  }
+
+  .company-name {
+    font-size: 25px;
+  }
+
+  .company-indicator {
+    font-size: 20px;
+  }
+
+  .solutions-offer {
+    margin-top: 100px;
+  }
+
+  .solutions-header {
+    font-size: 30px;
+  }
+
+  .solutions-desc {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .clients {
+    margin-top: 100px;
+  }
+
+  .clients-header {
+    font-size: 30px;
+  }
+
+  .client-js p {
+    font-size: 20px;
+  }
+
+  .clients-button div {
+    height: 70px;
+    width: 70px;
+  }
+
+  .clients-button p {
+    font-size: 25px;
+  }
+
+  .footer-menu-header {
+    font-size: 25px;
+  }
+
+  footer {
+    height: 170px;
+  }
+
+  .footer-container {
+    justify-content: center;
+  }
+
+  .footer-company img {
+    width: 70px;
+  }
+
+  .footer-company-header {
+    font-size: 25px;
+  }
+
+  .footer-company-desc {
+    font-size: 20px;
+  }
+
+  .footer-developers {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+
+  .menu {
+    height: 70px;
+  }
+
+  .logo-img-mob,
+  .loupe-mob,
+  .menu-phone img,
+  .basket {
+    height: 40px;
+  }
+
+  .nav-button-container {
+    top: 9px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-button {
+    width: 25px;
+  }
+
+  .nav-button::before {
+    width: 25px;
+    top: -8px;
+  }
+
+  .nav-button::after {
+    width: 25px;
+    top: 8px
+  }
+
+  .basket-icon-img {
+    top: 16px;
+  }
+
+  .basket-icon-img img {
+    height: 30px;
+  }
+
+  .basket-icon-count {
+    margin: 4px 0 0 12px;
+    font-size: 17px;
+  }
+
+  .body-container {
+    top: 70px;
+  }
+
+  .mix-slider-container {
+    width: 60%;
+  }
+
+  .mix-slider-1-portfolio {
+    font-size: 17px;
+  }
+
+  .mix-slider-1-name {
+    font-size: 20px;
+  }
+
+  .mix-slider-1-description {
+    font-size: 15px;
+  }
+
+  .mix-slider-1-more {
+    font-size: 15px;
+    margin-bottom: 57px;
+  }
+
+  .mix-slider .slick-dots {
+    bottom: 25px;
+  }
+
+  .mix-slider .slick-arrow.slick-prev {
+    bottom: 21px;
+    background: url('../img/svg/arrow-mob-left.svg') no-repeat center 47% /cover;
+    height: 17px;
+  }
+
+  .mix-slider .slick-arrow.slick-next {
+    bottom: 21px;
+    background: url('../img/svg/arrow-mob-right.svg') no-repeat center 47% /cover;
+    height: 17px;
+  }
+
+  .mix-sale {
+    height: 250px;
+  }
+
+  .mix-sale-content {
+    padding: 30px 0 0 30px;
+  }
+
+  .mix-sale-content img {
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .sale-text {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .sale-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sale-catalog {
+    font-size: 17px;
+  }
+
+  .brands img {
+    width: 110px;
+  }
+
+  .all-brands {
+    font-size: 15px;
+  }
+
+  .proposals-header-text,
+  .proposals-header-arrow {
+    font-size: 15px;
+  }
+
+  .proposal {
+    height: auto;
+    margin: 20px 0;
+  }
+
+  .proposal-country {
+    height: 17px;
+  }
+
+  .proposal-name,
+  .proposal-price {
+    font-size: 15px;
+  }
+
+  .service-slider-1 .service-content {
+    padding-bottom: 60px;
+  }
+
+  .service-name {
+    font-size: 20px;
+  }
+
+  .service-desc {
+    font-size: 15px
+  }
+
+  .service-more {
+    font-size: 15px;
+  }
+
+  .service-slider .slick-dots {
+    bottom: 25px;
+  }
+
+  .service-slider .slick-arrow.slick-prev {
+    bottom: 21px;
+    background: url('../img/svg/arrow-mob-left.svg') no-repeat center 47% /cover;
+    height: 17px;
+  }
+
+  .service-slider .slick-arrow.slick-next {
+    bottom: 21px;
+    background: url('../img/svg/arrow-mob-right.svg') no-repeat center 47% /cover;
+    height: 17px;
+  }
+
+  .recomend-header-title {
+    font-size: 23px;
+  }
+
+  .recomend-header-text {
+    font-size: 15px;
+  }
+
+  .recomend-1 .recomend-info {
+    margin-right: 15px;
+    min-width: 195px;
+  }
+
+  .recomend-js .recomend-brand {
+    font-size: 15px;
+  }
+
+  .recomend-js .recomend-name {
+    font-size: 20px;
+  }
+
+  .recomend-js .recomend-desc {
+    font-size: 13px;
+  }
+
+  .recomend-2 .recomend-info,
+  .recomend-3 .recomend-info {
+    margin-left: 10%;
+  }
+
+  .recomend-4 {
+
+  }
+
+  .recomend-4 .recomend-info {
+    margin-left: 4%;
+    width: 60%;
+  }
+
+  .recomend-5 {
+    background: url('../img/abat-img.jpg') no-repeat 40% center / cover
+  }
+
+  .recomend-5 .recomend-info {
+    margin-right: 2%;
+    width: 68%;
+  }
+
+  .info-company img {
+    height: 100px;
+  }
+
+  .company-desc {
+    font-size: 15px;
+  }
+
+  .company-type {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .company-indicators {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .company-name {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  .company-indicator {
+    font-size: 17px;
+  }
+
+  .solutions-header {
+    font-size: 23px;
+  }
+
+  .solutions-desc {
+    font-size: 15px;
+  }
+
+  .info-btn  {
+    margin-top: 35px;
+  }
+
+  .clients {
+    margin-top: 80px;
+  }
+
+  .clients-header {
+    font-size: 23px;
+  }
+
+  .client-js {
+    margin-bottom: 30px;
+  }
+
+  .clients-content p {
+    font-size: 15px;
+    margin-top: 0;
+  }
+
+  .clients img {
+    height: 70px;
+  }
+
+  .clients-button {
+    margin-bottom: 30px;
+  }
+
+  .clients-button div {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+  }
+
+  .clients-button p {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .footer-menu {
+    margin-top: 40px;
+    padding: 20px 0 15px;
+  }
+
+  .footer-menu-header {
+    font-size: 20px;
+  }
+
+  .footer-menu ul {
+    font-size: 15px;
+  }
+
+  footer {
+    height: 150px
+  }
+
+  .footer-company {
+    height: auto;
+  }
+
+  .footer-company img {
+    width: 45px;
+  }
+
+  .footer-company-header {
+    font-size: 20px;
+  }
+
+  .footer-company-desc,
+  .footer-developers {
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width: 376px) {
+
+  .container {
+    margin: 0 20px;
+  }
+
+  header .container {
+    margin: 0;
+    width: 60%;
+  }
+
+  .header-container {
+    left: -60%;
+  }
+
+  .header-container-active {
+    left: 0;
+  }
+
+  .nav {
+    margin: 70px 0 50px 20px;
+  }
+
+  .nav a {
+    font-size: 13px;
+  }
+
+  .menu {
+    height: 60px;
+  }
+
+  .nav-button-container {
+    width: 40px;
+    height: 40px;
+    left: 20px;
+  }
+
+  .nav-button {
+    width: 20px;
+    height: 2px;
+  }
+
+  .nav-button::before {
+    top: -8px;
+    width: 20px;
+    height: 2px;
+  }
+
+  .nav-button::after {
+    width: 20px;
+    height: 2px;
+    top: 8px;
+  }
+
+  .logo {
+    margin-left: 80px;
+  }
+
+  .logo-img-mob,
+  .loupe-mob,
+  .menu-phone img,
+  .basket {
+    height: 35px;
+  }
+
+  .basket-icon-count {
+    font-size: 15px;
+  }
+
+  .basket-icon-img {
+    top: 12px;
+  }
+
+  .basket-icon-img img {
+    height: 30px;
+  }
+
+
+
+  .body-container {
+    top: 60px;
+  }
+
+  .offers-mob {
+    height: 40px;
+  }
+
+  .offers-mob div {
+    font-size: 15px;
+  }
+
+  .mix-slider-1-portfolio {
+    font-size: 15px;
+  }
+
+  .mix-slider-1-name {
+    line-height: 1.05em;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .mix-slider-1-description {
+    font-size: 13px;
+    margin-top: 5%;
+  }
+
+  .mix-slider-1-more {
+    margin-bottom: 53px;
+    font-size: 13px;
+    height: 23px;
+    padding: 0 14px;
+  }
+
+  .mix-slider .slick-dots button,
+  .service-slider .slick-dots button {
+    height: 8px;
+    width: 8px;
+  }
+
+  .mix-slider .slick-arrow.slick-prev,
+  .mix-slider .slick-arrow.slick-next,
+  .service-slider .slick-arrow.slick-prev,
+  .service-slider .slick-arrow.slick-next {
+    height: 15px;
+    width: auto;
+    background-position: center 45%;
+  }
+
+  .mix-sale {
+    margin: 30px 20px 0;
+    height: 200px;
+  }
+
+  .mix-sale-content {
+    padding-top: 20px;
+  }
+
+  .mix-sale-content img {
+    height: 60px;
+    margin-bottom: 15px;
+  }
+
+  .sale-header {
+    margin-bottom: 15px;
+  }
+
+  .brands img {
+    width: 95px;
+  }
+
+  .proposals-header {
+    height: 40px;
+  }
+
+  .service-slider-1 .service-content {
+    padding-bottom: 52px;
+  }
+
+  .service-name {
+    margin-bottom: 5px;
+    font-size: 17px;
+  }
+
+  .service-desc {
+    font-size: 13px;
+  }
+
+  .recomend {
+    margin-top: 80px;
+  }
+
+  .recomend-header {
+    padding: 0 30px;
+  }
+
+  .recomend-header-title {
+    font-size: 20px;
+  }
+
+  .recomend-header-text {
+    font-size: 13px;
+  }
+
+  .recomend-string {
+    margin-top: 40px;
+  }
+
+  .recomend-string-2 {
+    margin-top: 10px;
+  }
+
+  .recomend-js .recomend-name {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+
+  .recomend-js .recomend-desc {
+    margin-top: 10px;
+  }
+
+  .recomend-1 .recomend-info {
+    min-width: 175px;
+    margin-right: 5%;
+  }
+
+  .recomend-6 {
+    background-position: 50% center;
+  }
+
+  .recomend-6 .recomend-info {
+    width: 63%;
+  }
+
+  .info-company {
+    margin: 0 20px;
+  }
+
+  .info-company img {
+    height: 80px;
+  }
+
+  .company-name,
+  .company-type {
+    font-size: 18px;
+  }
+
+  .company-desc,
+  .company-indicators {
+    font-size: 13px;
+  }
+
+  .company-indicator {
+    font-size: 15px;
+  }
+
+  .solutions-header {
+    font-size: 20px;
+  }
+
+  .solutions-desc {
+    font-size: 13px;
+  }
+
+  .clients {
+    margin-top: 70px;
+  }
+
+  .clients-content {
+    margin-top: 30px;
+  }
+
+  .clients-content p {
+    font-size: 13px;
+  }
+
+  .clients-button p {
+    font-size: 15px;
+  }
+
+  .footer-menu .container {
+    margin: 0 30px;
+  }
+
+  .footer-menu-header {
+    font-size: 18px;
+    height: 60px;
+  }
+
+  footer {
+    height: 130px;
+  }
+
+  .footer-company img {
+    width: 40px;
+  }
+
+  .footer-company-header {
+    font-size: 18px;
+  }
+
+  .footer-company-desc {
+    font-size: 13px;
+  }
+}
